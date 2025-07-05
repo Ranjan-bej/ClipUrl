@@ -13,7 +13,9 @@ const app = express();
 const PORT = process.env.PORT;
 const backendUrl = process.env.BACKENDURL;
 ConnectDB();
-app.use(cors());
+app.use(cors({
+  origin: ['https://clip-url-red.vercel.app','http://localhost:5000']
+}));
 app.use(bodyParser.json());
 
 
